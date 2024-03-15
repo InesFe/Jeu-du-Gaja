@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @arret %>
+
+<div>
+  <%= link_to "Modifier cet arrêt", edit_arret_path(@arret) %> |
+  <%= link_to "Liste des arrêts", arrets_path %>
+
+  <%= button_to "Supprimer cet arret", @arret, method: :delete %>
+</div>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Arrets</h1>
+
+<div id="arrets">
+  <% @arrets.each do |arret| %>
+    <%= render arret %>
+    <p>
+      <%= link_to "Voir cet arrêt", arret %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Ajouter un arrêt", new_arret_path %>
