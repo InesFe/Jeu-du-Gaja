@@ -4,6 +4,19 @@
     text-align: center;
 }
 
+.nav-item .nav-link {
+    color: #E0FFFF;
+}
+
+#logo {
+    float: left;
+    font-size: 1.5em;
+    color: #E0FFFF;
+    letter-spacing: -1px;
+    font-style: italic;
+    font-weight: bold;
+}
+
 .jumbotron {
     
     background-image: asset-url('patio.jpg');
@@ -14,11 +27,11 @@
     margin-right: auto;
     margin-top: 50px;
     padding: 20px;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .jumbotron h2 {
-    color:#E0FFFF;
+    color: #E0FFFF;
     font-style: italic;
     font-weight: bold;
     margin-top: 40px;
@@ -35,4 +48,26 @@
     margin-top: 20px;
     margin-bottom: 20px;
     color: #303030;
+}
+
+footer {
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid #303030;
+}
+
+footer small {
+    float: left;
+    color: #303030;
+}
+
+footer ul {
+    float: right;
+    list-style: none;
+    color: #303030;
+}
+
+footer ul li {
+    float: left;
+    margin-left: 15px;
 }

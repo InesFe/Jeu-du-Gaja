@@ -1,15 +1,17 @@
-<% if @questions.present? %>
-  <%= form_tag quiz_submit_path, method: :post, local: true, data: {turbo: false} do |form| %>
-    <h2><%= @current_question[:question] %></h2>
-    <% @current_question[:options].each_with_index do |option, index| %>
-      <div>
-        <%= radio_button_tag "question[answer_id]", option[1], {id: "option_#{index}", name: "question[answer_id]"} %>
-        <%= label_tag "option_#{index}", option[0] %>
-      </div>
+<div class="container">
+  <% if @questions.present? %>
+    <%= form_tag quiz_submit_path, method: :post, local: true, data: {turbo: false} do |form| %>
+      <h2><%= @current_question[:question] %></h2>
+      <% @current_question[:options].each_with_index do |option, index| %>
+        <div>
+          <%= radio_button_tag "question[answer_id]", option[1], {id: "option_#{index}", name: "question[answer_id]"} %>
+          <%= label_tag "option_#{index}", option[0] %>
+        </div>
+      <% end %>
+      <%= submit_tag "Submit" %>
     <% end %>
-    <%= submit_tag "Submit" %>
   <% end %>
-<% end %>
 
-<%= link_to "Page Home", root_path %>
-<%= link_to "Question suivante"%> 
+  <%= link_to "Page Home", root_path %> |
+  <%= link_to "Question suivante"%> 
+</div>
