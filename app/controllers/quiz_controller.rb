@@ -71,9 +71,9 @@ class QuizController < ApplicationController
             # Check if the submitted answer ID matches the correct answer ID
             if submitted_answer_id == correct_answer_id
               
-              flash[:notice] = "Bonne réponse!"
+              flash[:notice] = "Bonne réponse ⚖️"
             else
-              flash[:error] = "Mauvaise réponse"
+              flash[:error] = "Mauvaise réponse 📚"
             end
   
             #display the logs

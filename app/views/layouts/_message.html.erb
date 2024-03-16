@@ -1,4 +1,5 @@
 <!-- messages bonne ou mauvaise réponse -->
+    <div class="container">
     <% if flash[:notice] %>
       <div class="notice"><%= flash[:notice] %></div>
     <% end %>
@@ -6,3 +7,4 @@
     <% if flash[:error] %>
       <div class="error"><%= flash[:error] %></div>
     <% end %> 
+    </div>

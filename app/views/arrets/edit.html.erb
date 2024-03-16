@@ -1,10 +1,12 @@
-<h1>Editing arret</h1>
+<div class="container">
+  <h1>Modifier un arrêt</h1>
 
-<%= render "form", arret: @arret %>
+  <%= render "form", arret: @arret %>
 
-<br>
+  <br>
 
-<div>
-  <%= link_to "Voir cet arrêt", @arret %> |
-  <%= link_to "Liste des arrêts", arrets_path %>
+  <div>
+    <%= link_to "Voir cet arrêt", @arret %> |
+    <%= link_to "Liste des arrêts", arrets_path %>
+  </div>
 </div>
