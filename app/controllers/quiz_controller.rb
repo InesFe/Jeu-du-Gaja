@@ -16,7 +16,7 @@ class QuizController < ApplicationController
           correct_answer_id = arret.id 
           @questions << {
               type: question_type,
-              question: "Quel est le nom de l'arrêt rendu en #{arret.year} dont l'apport est  suivant: #{arret.apport}",
+              question: "Quel est le nom de l'arrêt rendu en #{arret.year} dont l'apport est le suivant: #{arret.apport}",
               options: options.map { |option| [option.name, option.id] },
               correct_answer: correct_answer_id.to_i
           }
@@ -29,7 +29,7 @@ class QuizController < ApplicationController
           correct_answer_id = arret.id 
           @questions << {
               type: question_type,
-              question: "En quelle année a été rendu l'arret #{arret.name} dont l'apport est le suivant: #{arret.apport}?",
+              question: "En quelle année a été rendu l'arrêt #{arret.name} dont l'apport est le suivant: #{arret.apport}?",
               options: options.map { |option| [option.year, option.id] },
               correct_answer: correct_answer_id
           }
