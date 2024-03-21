@@ -1,16 +1,20 @@
 <p style="color: green"><%= notice %></p>
 
 <div class="container">
-  <h1>Liste des arrêts du jeu</h1>
-
-    <div id="arrets">
-      <% @arrets.each do |arret| %>
-        <%= render arret %>
-        <p>
-          <%= link_to "Voir cet arrêt", arret %>
-        </p>
-      <% end %>
+  <div style="text-align: center">
+    <div style="color: #303030">
+      <h1>Liste des arrêts du jeu</h1>
     </div>
+  </div>
+
+  <div id="arrets">
+    <% @arrets.each do |arret| %>
+      <%= render arret %>
+      <p>
+        <%= link_to "Voir cet arrêt", arret %>
+      </p><hr />
+    <% end %>
+  </div>
 
 <%= link_to "Ajouter un arrêt", new_arret_path %>
 </div>
