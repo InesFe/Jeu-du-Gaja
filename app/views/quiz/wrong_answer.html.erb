@@ -3,7 +3,7 @@
 
   <p><h3>La bonne réponse était </h3><br>
     
-    <h3><strong> <%= @correct_arret.name %>, rendu en <%= @correct_arret.year %>, dont l'apport est le suivant : <%= @correct_arret.apport %></strong></h3><br>
+    <h3><strong> <%= @correct_arret.name %>, <%= @correct_arret.year %>, dont l'apport est le suivant : <%= @correct_arret.apport %></strong></h3><br>
   </p>
   
   <%= link_to "Question suivante", quiz_index_path, class: "btn btn btn-lg w-50" %>
