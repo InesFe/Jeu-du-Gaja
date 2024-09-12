@@ -84,3 +84,54 @@ hr {
     background-color: #E0FFFF;
     border-color: #303030;
     }
+
+.green {
+    background-color: green;
+    color: white;
+    }
+      
+.red {
+    background-color: red;
+    color: white;
+    }
+
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    }
+      
+.option {
+    margin-bottom: 10px;
+    }
+      
+.toggle-radio {
+    display: none;
+    }
+      
+.toggle-label {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 15px;
+    border: 1px solid #303030;
+    border-radius: 8px;
+    background-color: #E0FFFF;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+      
+.toggle-radio:checked + .toggle-label {
+    background-color: #303030;
+    color: #E0FFFF;
+    border-color: #303030;
+    }
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Vertically center */
+    align-items: center;     /* Horizontally center */
+    height: 100vh;           /* Take full viewport height */
+    text-align: center;  /*center the text */
+    padding-top: 20vh;     
+    }

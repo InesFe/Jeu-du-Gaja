@@ -54,46 +54,54 @@ class QuizController < ApplicationController
           session[:questions] = @questions
           session[:current_question_index] = 0
       end
-  
+    
       def submit
-          # Retrieve questions and current_question_index from session
-          @questions = session[:questions]
-          @current_question_index = session[:current_question_index] || 0
-          @current_question = @questions[@current_question_index]
-  
-          correct_answer_id = session[:correct_answer_ids][@current_question_index].to_i
-          score = 0
-          # Check if the user has submitted an answer
-          if params[:question].present? && params[:question][:answer_id].present?
-            # Convert the submitted answer ID to an integer for comparison
-            submitted_answer_id = params[:question][:answer_id].to_i
+        # Retrieve questions and current_question_index from session
+        @questions = session[:questions]
+        @current_question_index = session[:current_question_index] || 0
+        @current_question = @questions[@current_question_index]
+
+        correct_answer_id = session[:correct_answer_ids][@current_question_index].to_i
+        score = 0
+        # Check if the user has submitted an answer
+        if params[:question].present? && params[:question][:answer_id].present?
+          # Convert the submitted answer ID to an integer for comparison
+          submitted_answer_id = params[:question][:answer_id].to_i
+        
+          # Check if the submitted answer ID matches the correct answer ID
+          if submitted_answer_id == correct_answer_id
+            redirect_to correct_answer_path
           
-            # Check if the submitted answer ID matches the correct answer ID
-            if submitted_answer_id == correct_answer_id
-              
-              flash[:notice] = "Bonne réponse ⚖️"
-            else
-              flash[:error] = "Mauvaise réponse 📚"
-            end
-  
-            #display the logs
-            Rails.logger.info("Correct answer ID: #{correct_answer_id}")
-            Rails.logger.info("Submitted answer ID: #{submitted_answer_id}")
-        
-            # Move to the next question
-            session[:current_question_index] += 1
-        
-            # Redirect back to the quiz index if there are more questions
-            if session[:current_question_index] < @questions.length
-              redirect_to quiz_index_path
-            else
-              # Redirect to some other page once all questions have been answered
-              redirect_to quiz_index_path
-            end
           else
-            # Handle case when no answer is submitted
-            flash[:error] = 'Please select an answer.'
-            redirect_to root_path
+            #correct_arret = Arret.find(correct_answer_id)
+            #flash[:error] = "Mauvaise réponse LA BONNE RÉPONSE ÉTAIT #{correct_answer_id}   📚"
+            #redirect_to wrong_answer_path(correct_arret: correct_arret)
+            # Find the correct Arret record
+            correct_arret = Arret.find(correct_answer_id)
+
+            # Pass the correct Arret to the wrong_answer page
+            redirect_to wrong_answer_path(correct_arret: correct_arret)
           end
+
+          #display the logs
+          Rails.logger.info("Correct answer ID: ")
+          Rails.logger.info("Submitted answer ID: #{submitted_answer_id}")
+      
+          # Move to the next question
+          session[:current_question_index] += 1
+        
+        else
+          #Handle case when no answer is submitted
+          flash[:error] = 'Merci de choisir une réponse'
+          redirect_to quiz_index_path
         end
-  end
+      end
+        
+      def correct_answer
+        
+      end
+
+      def wrong_answer
+        @correct_arret = Arret.find(params[:correct_arret]) if params[:correct_arret]
+      end
+end

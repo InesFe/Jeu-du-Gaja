@@ -8,3 +8,4 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 #ajouté pour bootstrap
 pin "popper", to: 'popper.js', preload: true 
 pin "bootstrap", to: 'bootstrap.min.js', preload: true
+pin "canvas-confetti" # @1.9.3
