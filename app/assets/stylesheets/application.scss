@@ -1,5 +1,11 @@
 @import "bootstrap";
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
 .center {
     text-align: center;
 }
@@ -135,3 +141,19 @@ hr {
     text-align: center;  /*center the text */
     padding-top: 20vh;     
     }
+
+.degrade-angulaire {
+    background: linear-gradient(70deg, #BBD2E1, #FEBFD2);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    display: flex;
+}
+
+.degrade-horizontal {
+    background: linear-gradient(to right, #BBD2E1, #D2CAEC);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    display: flex;
+}
