@@ -1,10 +1,12 @@
-<div class="center container center-content">
-  <h2> 📖 Mauvaise réponse, il faut réviser cet arrêt ! 📚</h2>
+<div class="degrade-horizontal>
+  <div class="center container center-content">
+    <h2> 📖 Mauvaise réponse, il faut réviser cet arrêt ! 📚</h2>
 
-  <p><h3>La bonne réponse était </h3><br>
+      <p><h3>La bonne réponse était </h3><br>
     
-    <h3><strong> <%= @correct_arret.name %>, <%= @correct_arret.year %>, dont l'apport est le suivant : <%= @correct_arret.apport %></strong></h3><br>
-  </p>
+      <h3><strong> <%= @correct_arret.name %>, <%= @correct_arret.year %>, dont l'apport est le suivant : <%= @correct_arret.apport %></strong></h3><br>
+      </p>
   
-  <%= link_to "Question suivante", quiz_index_path, class: "btn btn btn-lg w-50" %>
-</div>
+    <%= link_to "Question suivante", quiz_index_path, class: "btn btn btn-lg w-50" %>
+  </div>
+</div
