@@ -56,6 +56,12 @@ html, body {
     color: #303030;
 }
 
+.gaja-page h2 {
+    font-family: 'Baskerville', serif;
+    font-style: italic;
+    font-weight: bold; 
+    color: #303030;   
+}
 footer {
     margin-top: 45px;
     padding-top: 5px;
@@ -135,10 +141,10 @@ hr {
 .center-content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Vertically center */
-    align-items: center;     /* Horizontally center */
-    height: 100vh;           /* Take full viewport height */
-    text-align: center;  /*center the text */
+    justify-content: flex-start; 
+    align-items: center;     
+    height: 100vh;           
+    text-align: center;
     padding-top: 20vh;     
     }
 
@@ -164,4 +170,19 @@ hr {
     width: 100vw;
     background-size: cover;
     display: flex;
+}
+
+
+.correct-answer-page h2 {
+    font-family: 'Baskerville', serif;
+    font-style: italic;
+    font-weight: bold;  
+    color: #303030;
+}
+
+.wrong-answer-page h2 {
+    font-family: 'Baskerville', serif;
+    font-style: italic;
+    font-weight: bold;  
+    color: #303030;
 }
