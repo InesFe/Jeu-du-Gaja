@@ -1,9 +1,12 @@
-<div class= "center container gaja-page">
-    <div class="jumbotron rounded">
-        <h2>The GAJA GAME</h2>
-            <p>QCM de révison des grands arrêts de droit administratif</p> 
-            <p>Testez vos connaissances, objectif: mention très bien!</p>
-            <p><%= link_to 'Jouer', quiz_index_path,class:"btn btn btn-lg", style:"background-color: #E0FFFF " %> |
-                <%= link_to 'Réviser', arrets_path, class:"btn btn btn-lg", style:"background-color: #E0FFFF" %></p>
+<div class="degrade-horizontal">
+    <div class= "center container gaja-page">
+        <div class="jumbotron rounded">
+            <h2>The GAJA GAME</h2>
+                <p>QCM de révison des grands arrêts de droit administratif</p> 
+                <p>Testez vos connaissances, objectif: mention très bien!</p>
+                <p><%= link_to 'Jouer', quiz_index_path,class:"btn btn btn-lg", style:"background-color: #E0FFFF " %> |
+                    <%= link_to 'Réviser', arrets_path, class:"btn btn btn-lg", style:"background-color: #E0FFFF" %></p>
+        </div>
+        <%= render "layouts/footer" %>
     </div>
 </div>
