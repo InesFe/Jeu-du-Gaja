@@ -1,24 +1,26 @@
-<div class="container">
-  <% if @questions.present? %>
-    <%= form_tag quiz_submit_path, style:"margin-top: 20px", method: :post, local: true, data: {turbo: false} do |form| %>
-      <h2><%= @current_question[:question] %></h2>
-      <div class="options-container">
-        <% @current_question[:options].each_with_index do |option, index| %>
-          <div class="option">
-            <%= radio_button_tag "question[answer_id]", option[1], false, id: "option_#{index}", class: "toggle-radio" %>
-            <%= label_tag "option_#{index}", option[0], class: "toggle-label" %>
-          </div>
-        <% end %>
-      </div>
-    
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <%=  submit_tag "Valider", class:"btn btn btn-lg w-100"%>
+<div class="degrade-angulaire"
+  <div class="container">
+    <% if @questions.present? %>
+      <%= form_tag quiz_submit_path, style:"margin-top: 20px", method: :post, local: true, data: {turbo: false} do |form| %>
+        <h2><%= @current_question[:question] %></h2>
+        <div class="options-container">
+          <% @current_question[:options].each_with_index do |option, index| %>
+            <div class="option">
+              <%= radio_button_tag "question[answer_id]", option[1], false, id: "option_#{index}", class: "toggle-radio" %>
+              <%= label_tag "option_#{index}", option[0], class: "toggle-label" %>
+            </div>
+          <% end %>
         </div>
-      </div>
+    
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <%=  submit_tag "Valider", class:"btn btn btn-lg w-100"%>
+          </div>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
 
-  <%= link_to "Page Home", root_path %> |
-  <%= link_to "Question suivante"%> 
-</div>  
+    <%= link_to "Page Home", root_path %> |
+    <%= link_to "Question suivante"%> 
+  </div> 
+</div>
