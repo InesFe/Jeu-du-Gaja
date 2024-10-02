@@ -15,11 +15,11 @@ html, body {
 }
 
 #logo {
-    font-family: 'Baskerville', Baskerville, serif;    
+    font-family: 'Baskerville', Baskerville, serif;
     float: left;
     font-size: 1.5em;
     color: #E0FFFF;
-    letter-spacing: -1px;
+    letter-spacing: 0px;
     font-style: italic;
     font-weight: bold;
 }
@@ -29,12 +29,12 @@ html, body {
     background-image: asset-url('patio.jpg');
     background-size: cover;
     height: 550px;
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
     padding: 20px;
-    max-width: 600px;
+    max-width: 700px;
 }
 
 .jumbotron h2 {
@@ -52,17 +52,25 @@ html, body {
 }
 
 .jumbotron .btn {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     color: #303030;
 }
 
 .gaja-page h2 {
     font-family: 'Baskerville', serif;
-    font-style: italic;
-    font-weight: bold; 
-    color: #303030;   
+    font-style: italic; /* Optional, adjust if needed */
+    font-weight: bold;  /* Optional */
+    color: #303030;     /* Adjust the color if necessary */
 }
+
+.gaja-page h3 {
+    font-family: 'Baskerville', serif;
+    font-style: italic; /* Optional, adjust if needed */
+    font-weight: bold;  /* Optional */
+    color: #303030;     /* Adjust the color if necessary */
+}
+
 footer {
     margin-top: 45px;
     padding-top: 5px;
@@ -142,10 +150,10 @@ hr {
 .center-content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; 
-    align-items: center;     
-    height: 100vh;           
-    text-align: center;
+    justify-content: flex-start; /* Vertically center */
+    align-items: center;     /* Horizontally center */
+    height: 100vh;           /* Take full viewport height */
+    text-align: center;  /*center the text */
     padding-top: 20vh;     
     }
 
@@ -173,7 +181,6 @@ hr {
     display: flex;
 }
 
-
 .correct-answer-page h2 {
     font-family: 'Baskerville', serif;
     font-style: italic;
@@ -187,4 +194,3 @@ hr {
     font-weight: bold;  
     color: #303030;
 }
-
