@@ -41,34 +41,46 @@ html, body {
     color: #E0FFFF;
     font-style: italic;
     font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 .jumbotron p {
     color: #303030;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 .jumbotron .btn {
     margin-top: 50px;
     margin-bottom: 50px;
     color: #303030;
+    font-family: 'Baskerville', serif;
+    font-weight: bold;
 }
 
 .gaja-page h2 {
     font-family: 'Baskerville', serif;
-    font-style: italic; /* Optional, adjust if needed */
-    font-weight: bold;  /* Optional */
-    color: #303030;     /* Adjust the color if necessary */
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px cyan,
+                 0px 0px 20px cyan,
+                 0px 0px 40px cyan,
+                 0px 0px 80px cyan;
+    color: #E0FFFF;
 }
 
 .gaja-page h3 {
     font-family: 'Baskerville', serif;
-    font-style: italic; /* Optional, adjust if needed */
-    font-weight: bold;  /* Optional */
-    color: #303030;     /* Adjust the color if necessary */
+    font-style: italic; 
+    font-weight: bold;  
+    color: #303030; 
+    text-shadow: 0px 0px 10px cyan,
+                 0px 0px 20px cyan,
+                 0px 0px 40px cyan,
+                 0px 0px 80px cyan;
 }
 
 footer {
@@ -98,6 +110,9 @@ footer ul li {
     margin-bottom: 15px;
     color: #E0FFFF;
     background-color: #303030;
+    font-family: 'Baskerville', Baskerville, serif;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 hr {
@@ -166,7 +181,7 @@ hr {
 }
 
 .degrade-horizontal {
-    background: linear-gradient(to right, #BBD2E1, #D2CAEC);
+    background: linear-gradient(to left, #73C2FB, #26619C);
     height: 100vh;
     width: 100vw;
     background-size: cover;
@@ -182,15 +197,32 @@ hr {
 }
 
 .correct-answer-page h2 {
+    text-align: center;
+    margin-top: 40px ;
+    margin-bottom: 40px;
     font-family: 'Baskerville', serif;
     font-style: italic;
     font-weight: bold;  
-    color: #303030;
+    font-family: 'Baskerville', serif;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px cyan,
+                 0px 0px 20px cyan,
+                 0px 0px 40px cyan,
+                 0px 0px 80px cyan;
+    color: #E0FFFF;
 }
 
 .wrong-answer-page h2 {
+    text-align: center;
+    margin-top: 30px ;
+    margin-bottom: 30px;
     font-family: 'Baskerville', serif;
     font-style: italic;
     font-weight: bold;  
-    color: #303030;
+    text-shadow: 0px 0px 10px cyan,
+             0px 0px 20px cyan,
+             0px 0px 40px cyan,
+             0px 0px 80px cyan;
+    color: #E0FFFF;
 }
