@@ -106,19 +106,21 @@ footer ul li {
 }
 
 .btn-lg {
-    margin-top: 15px;
-    margin-bottom: 15px;
     color: #E0FFFF;
     background-color: #303030;
     font-family: 'Baskerville', Baskerville, serif;
     font-weight: bold;
     letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 hr {
-    height: 3px;
-    background-color: #E0FFFF;
-    border-color: #303030;
+    height: 2px;
+    background-color: black;
+    border-color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
     }
 
 .green {
@@ -149,7 +151,6 @@ hr {
     display: inline-block;
     padding: 10px 20px;
     margin: 15px;
-    border: 1px solid #303030;
     border-radius: 8px;
     background-color: #E0FFFF;
         cursor: pointer;
@@ -160,6 +161,7 @@ hr {
     background-color: #303030;
     color: #E0FFFF;
     border-color: #303030;
+    border-radius: 8px;
     }
 
 .center-content {
@@ -225,4 +227,48 @@ hr {
              0px 0px 40px cyan,
              0px 0px 80px cyan;
     color: #E0FFFF;
+}
+
+.wrong-answer-page h3 {
+    text-shadow: 0px 0px 10px cyan,
+             0px 0px 20px cyan,
+             0px 0px 40px cyan,
+             0px 0px 80px cyan;
+}
+
+.correct-answer-page h3 {
+    text-shadow: 0px 0px 10px cyan,
+             0px 0px 20px cyan,
+             0px 0px 40px cyan,
+             0px 0px 80px cyan;
+}
+
+.question-header {
+    text-align: center;
+    font-family: 'Baskerville', serif;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #303030;
+    text-shadow: 0px 0px 10px cyan,
+             0px 0px 20px cyan,
+             0px 0px 40px cyan,
+             0px 0px 80px cyan;
+}
+
+.btn-sm {
+    font-family: 'Baskerville', serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #303030;
+    background-color: #E0FFFF;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.navbar-nav {
+    font-family: 'Baskerville', serif;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
